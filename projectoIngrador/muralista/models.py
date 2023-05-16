@@ -39,4 +39,7 @@ class Color(models.Model):
 class Paleta(models.Model):
     idPaleta = models.CharField(primary_key=True, max_length=6)
     color = models.ForeignKey(Color, on_delete=models.CASCADE) 
-    muralista = models.ForeignKey(Muralista , on_delete=models.CASCADE)      
+    muralista = models.ForeignKey(Muralista , on_delete=models.CASCADE)  
+
+class Ejemplo(models.Model):
+     ejemplo = models.CharField(max_length=200)    
